@@ -46,12 +46,6 @@ A Laravel-based Quiz Management System with separate authentication systems for 
 
 ---
 
-## Project Screenshots
-
-(Add screenshots here later)
-
----
-
 ## Future Improvements
 
 * Quiz Timer
