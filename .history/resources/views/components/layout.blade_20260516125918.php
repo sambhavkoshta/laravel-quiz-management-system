@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @vite('resources/css/app.css')
+    <script defer src="https://jsdelivr.net"></script>
+    <title>Quiz System</title>
+</head>
+
+<body class="bg-gray-200 w-full min-h-screen">
+    <x-navbar></x-navbar>
+    <div class="w-full">{{$main}}</div>
+</body>
+
+</html>

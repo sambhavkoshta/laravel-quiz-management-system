@@ -1,0 +1,12 @@
+<x-layout>
+    <x-slot name="main">
+        <div class="min-h-screen bg-white m-4 rounded-xl">
+            <div class="text-3xl text-center p-4 font-bold text-gray-700">
+                <h2>Quiz Categories</h2>
+            </div>
+            @foreach($categories as $category)
+            <div>{{$category->name}} <span><a href="{{url('/student/quizzes/'.$category->id)}}">View Quiz</a></span></div>
+            @endforeach
+        </div>
+    </x-slot>
+</x-layout>

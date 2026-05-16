@@ -1,0 +1,28 @@
+<x-navbar></x-navbar>
+<h1>Student dashboard</h1>
+
+@if (session('loginSuccess'))
+<div>
+    {{ session('loginSuccess') }}
+</div>
+@endif
+
+@if (session('registeredSuccess'))
+<div>
+    {{ session('registeredSuccess') }}
+</div>
+@endif
+
+@if (session('success'))
+<div>
+    {{ session('success') }}
+</div>
+@endif
+
+<p>Welcome {{session('student')->username}}</p>
+<p>Welcome {{session('student')->email}}</p>
+<p>Welcome {{session('student')->created_at}}</p>
+
+<a href="{{url('/edit/'.session('student')->id)}}">Edit</a>
+
+<a href="{{url('/logout')}}">Logout</a>

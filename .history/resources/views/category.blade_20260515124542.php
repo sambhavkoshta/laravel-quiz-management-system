@@ -1,0 +1,10 @@
+<h1>Create Category</h1>
+<form action="{{url('/categories/add')}}" method="post">
+    @csrf
+    <input type="text" name="name" placeholder="Enter Catrgory Name"><br>
+    <button type="submit">Add</button>
+</form>
+
+<div>
+    <div></div>
+</div>

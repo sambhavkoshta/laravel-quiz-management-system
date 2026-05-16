@@ -1,0 +1,19 @@
+<h1>Create MCQs</h1>
+<form action="{{url('/mcqs/add')}}" method="post">
+    @csrf
+    <input type="text" name="name" placeholder="Enter Quiz Name"><br>
+
+    <button type="submit">Add</button>
+</form>
+
+<div>
+    @foreach($quizzes as $quiz)
+    <div style="display: flex; padding: 10px;">
+        <div style="margin:5px">{{$quiz->name}}</div>
+        <div style="margin:5px">{{$quiz->categories->name}}</div>
+        <div style="margin:5px"><a href="{{url('/quizzes/edit/'.$quiz->id)}}">Edit</a></div>
+        <div style="margin:5px"><a href="{{url('/mcqs')}}">Add MCQS</a></div>
+        <div style="margin:5px"><a href="{{url('/quizzes/delete/'.$quiz->id)}}">Delete</a></div>
+    </div>
+    @endforeach
+</div>
